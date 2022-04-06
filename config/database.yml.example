@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: censore
+  password: censore!
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: cool_library
+
+test:
+  <<: *default
+  database: cool_library
+
+production:
+  <<: *default
+  database: cool_library
+  username: root
+  password: <%= ENV["COOL_LIBRARY_DATABASE_PASSWORD"] %>
