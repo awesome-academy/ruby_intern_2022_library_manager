@@ -12,14 +12,17 @@
       <a href="#" class="nav-link">Contact</a>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Help
-      </a>
+      <%= link_to t(".help"), "#", class: "nav-link dropdown-toggle",
+      id: "navbarDropdown", role: "button",
+      "data-toggle": "dropdown",
+      "aria-haspopup": "true", "aria-expanded": "false" %>
+
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="#">FAQ</a>
-        <a class="dropdown-item" href="#">Support</a>
+        <%= link_to t(".log_out"), "#", class: "dropdown-item" %>
+        <%= link_to t(".log_out"), "#", class: "dropdown-item" %>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Contact</a>
+        <%= link_to t(".log_out"), admin_logout_path,
+            class: "dropdown-item", data: {"turbo-method": :delete} %>
       </div>
     </li>
   </ul>

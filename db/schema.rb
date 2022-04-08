@@ -127,7 +127,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_12_015758) do
     t.string "language", null: false
     t.integer "number_of_pages", null: false
     t.date "publication_date", null: false
-    t.integer "status", null: false
+    t.integer "status", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_url"
@@ -175,7 +175,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_12_015758) do
   end
 
   create_table "library_cards", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "car_code", null: false
+    t.string "card_code", null: false
     t.string "bar_code", null: false
     t.date "issued_at", null: false
     t.bigint "member_id"

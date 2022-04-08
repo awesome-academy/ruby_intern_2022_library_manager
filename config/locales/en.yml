@@ -7,11 +7,27 @@ en:
       about: "About"
       contact: "Contact"
       help: "Help"
+      book: "Book"
+      reservations: "Reservations"
+      lending: "Lendings"
+      accounts: "Accounts"
+      profile: "Profile"
+      logout: "Log out"
     footer:
       source: "View Source code on github"
       about: "About"
       news: "News"
       contact: "Contact"
+    headeradmin:
+      help: "Help"
+      log_out: "Log out"
+    sidebaradmin:
+      library_name: "Awesome Library"
+      manage_book: "Manage Books"
+      books: "Books"
+      stat: "Stat"
+      waiting: "Waiting"
+      confirm: "Confirm"
   static_pages:
     home:
       title: "Home"
@@ -41,11 +57,29 @@ en:
       via_phone: "Via phone number : %{phone_number}"
       via_mail: "Via email : "
       email: "library@awesome.com"
+  sessions:
+    new:
+      title: "Member Login"
+      name: "Login Member Site"
+      username: "Username"
+      password: "Password"
+      log_in: "Log in"
+    create:
+      not_member: "You are not a member!"
+      invalid_info: "Your account/password is incorrect"
   admin:
     admin_page:
       home:
         title: "Home Page"
         intro: "This is the home page"
         hint: "For now, that's it!"
-
-
+    sessions:
+      new:
+        title: "Admin Login"
+        name: "Login Admin Site"
+        username: "Username"
+        password: "Password"
+        log_in: "Log in"
+      create:
+        not_librarian: "You are not a librarian!"
+        invalid_info: "Your account/password is incorrect"
