@@ -1,0 +1,44 @@
+<% provide :title, t(".title", title: @book.title) %>
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <div class="card">
+      <div class="card-header">
+        <p class="font-weight-bold">
+          <%= @book.title %>
+        </p>
+      </div>
+      <div class="card-body">
+        <div class="row">
+        <div class="image-holder col-md-6">
+          <%= image_tag @book.image_url, alt: @book.title %>
+        </div>
+
+        <div class="col-md-6">
+          <p><%= t ".title", title: @book.title %><p>
+          <p><%= t ".isbn", isbn: @book.isbn %><p>
+          <p><%= t ".language", language: @book.language %><p>
+          <p><%= t ".number_of_pages", number_of_pages: @book.number_of_pages %><p>
+          <p><%= t ".publication_date", publication_date: @book.publication_date %><p>
+          <p><%= t ".status", status: @book.status %><p>
+          <p><%= t ".subject", subject: @book.subject %><p>
+
+          <p><%= t ".authors" %>
+          <% for author in @book.authors %>
+            <span><%= link_to author.name, [:admin, author] %></span>
+          <% end %>
+          </p>
+
+          <p><%= t ".publishers" %>
+          <% for publisher in @book.publishers %>
+            <span><%= link_to publisher.name, [:admin, publisher] %></span>
+          <% end %>
+          </p>
+
+          <%= link_to t(".book_items"), admin_book_book_items_path(@book),
+              class: "btn btn-success" %>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

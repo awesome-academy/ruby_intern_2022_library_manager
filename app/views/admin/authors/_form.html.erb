@@ -1,0 +1,11 @@
+<%= form_with model: [:admin, @author] do |f| %>
+  <%= render partial: "error_messages" %>
+
+  <%= f.label :name, t(".name") %>
+  <%= f.text_field :name, class: "form-control" %>
+
+  <%= f.label :bio, t(".bio") %>
+  <%= f.text_area :bio, class: "form-control" %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

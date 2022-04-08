@@ -1,0 +1,46 @@
+<%= form_with model: [:admin, @book] do |f| %>
+  <%= render partial: "error_messages" %>
+
+  <%= f.label :isbn, t(".isbn") %>
+  <%= f.text_field :isbn, class: "form-control" %>
+
+  <%= f.label :title, t(".book_title") %>
+  <%= f.text_field :title, class: "form-control" %>
+
+  <%= f.label :language, t(".language") %>
+  <%= f.text_field :language, class: "form-control" %>
+
+  <%= f.label :number_of_pages, t(".number_of_pages") %>
+  <%= f.number_field :number_of_pages, class: "form-control",
+      min: 1 %>
+
+  <%= f.label :publication_date, t(".publication_date") %>
+  <%= f.date_field :publication_date, class: "form-control" %>
+
+  <%= f.label :format, t(".format") %>
+  <%= f.select :status,
+      Book.statuses.keys.to_a,
+      {prompt: true},
+      {class: "form-control"} %>
+
+  <%= f.label :format, t(".format") %>
+  <%= f.select :status,
+      Book.subjects.keys.to_a,
+      {prompt: true},
+      {class: "form-control"} %>
+
+  <%= f.label :image_url, t(".image_url") %>
+  <%= f.text_field :image_url, class: "form-control" %>
+
+  <%= f.label :author_ids, t(".authors") %>
+  <%= f.collection_select :author_ids, Author.ordered_by_name,
+      :id, :name, {multiple: true},
+      {class: "form-control", multiple: true} %>
+
+  <%= f.label :publisher_ids, t(".publishers") %>
+  <%= f.collection_select :publisher_ids, Publisher.ordered_by_name,
+      :id, :name, {multiple: true},
+      {class: "form-control", multiple: true} %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

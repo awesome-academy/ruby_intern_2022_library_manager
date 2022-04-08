@@ -1,0 +1,17 @@
+<tr>
+  <td><%= book_item.id %></td>
+  <td><%= book_item.bar_code %></td>
+  <td><%= book_item.price %></td>
+  <td><%= book_item.status %></td>
+  <td>
+    <%= link_to t(".detail"), [:admin, book_item.book, book_item],
+        class: "btn btn-info" %>
+    <%= link_to t(".edit"),
+        edit_admin_book_book_item_path(book_item.book, book_item),
+        class: "btn btn-success" %>
+    <% if book_item.book_lendings == 0 %>
+      <%= link_to t(".delete"),[:admin, book_item.book, book_item],
+        class: "btn btn-danger", data: {turbo_method: :delete} %>
+    <% end %>
+  </td>
+</tr>

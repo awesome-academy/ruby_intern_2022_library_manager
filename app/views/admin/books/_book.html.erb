@@ -1,0 +1,14 @@
+<tr>
+  <td><%= book.id %></td>
+  <td><%= book.title %></td>
+  <td><%= book.isbn %></td>
+  <td>
+    <%= link_to t(".detail"), [:admin, book], class: "btn btn-info" %>
+    <%= link_to t(".edit"), edit_admin_book_path(book),
+                    class: "btn btn-success" %>
+    <% if book.book_items.count == 0 %>
+      <%= link_to t(".delete"), admin_book_path(book),
+        class: "btn btn-danger", data: {turbo_method: :delete} %>
+    <% end %>
+  </td>
+</tr>

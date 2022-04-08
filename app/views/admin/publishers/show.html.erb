@@ -1,0 +1,17 @@
+<% provide :title, t(".title", name: @publisher.name) %>
+<div class="card">
+  <div class="card-header">
+    <p class="font-weight-bold">
+      <%= @publisher.name %>
+    </p>
+  </div>
+  <div class="card-body">
+    <p><%= t ".name", name: @publisher.name %><p>
+    <p><%= t ".description", description: @publisher.description %><p>
+    <p><%= t ".contact", contact: @publisher.contact %><p>
+    <p><%= t ".street", street: @publisher.address.street %><p>
+    <p><%= t ".sub_district", sub_district: @publisher.address.sub_district %><p>
+    <p><%= t ".district", district: @publisher.address.district %><p>
+    <p><%= t ".city", city: @publisher.address.city %><p>
+  </div>
+</div>

@@ -25,6 +25,8 @@ en:
       library_name: "Awesome Library"
       manage_book: "Manage Books"
       books: "Books"
+      authors: "Authors"
+      publishers: "Publishers"
       stat: "Stat"
       waiting: "Waiting"
       confirm: "Confirm"
@@ -83,3 +85,159 @@ en:
       create:
         not_librarian: "You are not a librarian!"
         invalid_info: "Your account/password is incorrect"
+    authors:
+      new:
+        unauthorized: "You are not loggin, Login now?"
+        create_author: "Create Author"
+      show:
+        unauthorized: "You are not loggin, Login now?"
+        name: "Author %{name}"
+        author_not_found: "Can not found user with the id: %{id}!"
+      index:
+        unauthorized: "You are not loggin, Login now?"
+        title: "All authors"
+        name: "All authors"
+        author_name: "Name"
+        options: "Options"
+        detail: "Details"
+        edit: "Edit"
+        delete: "Delete"
+        new: "Create New"
+      edit:
+        unauthorized: "You are not loggin, Login now?"
+        title: "Edit Author"
+        page_name: "Edit Author"
+        author_not_found: "Can not found user with the id: %{id}!"
+        edit: "Update"
+      destroy:
+        unauthorized: "You are not loggin, Login now?"
+        author_not_found: "Can not found user with the id: %{id}!"
+        deleted: "Author has been deleted"
+        forbidden: "Something bad happenned"
+      update:
+        unauthorized: "You are not loggin, Login now?"
+        author_not_found: "Can not found user with the id: %{id}!"
+        updated: "Author has been updated!"
+      form:
+        name: "Name"
+        bio: "Biography"
+        unauthorized: "You are not loggin, Login now?"
+    publishers:
+      index:
+        title: "All Publishers"
+        name: "All Publishers"
+        publisher_name: "Name"
+        city: "City"
+        new: "New Publisher"
+        option: "Options"
+      show:
+        title: "Publisher %{name}"
+        name: "Name: %{name}."
+        description: "Description: %{description}"
+        contact: "Contact: %{contact}."
+        street: "Street: %{street}."
+        sub_district: "Subdistrict: %{sub_district}."
+        district: "District: %{district}."
+        city: "City: %{city}."
+      publisher:
+        detail: "Detail"
+        edit: "Edit"
+        delete: "Delete"
+      new:
+        title: "Create Publisher"
+        create_publisher: "Create"
+        name: "Create Publihser"
+      edit:
+        title: "Edit Publisher"
+        edit_publisher: "Edit"
+        name: "Edit Publihser"
+      destroy:
+        deleted: "Delete successfully!"
+        fail_to_delete: "Fail to delete"
+    books:
+      show:
+        title: "%{title}"
+        isbn: "ISBN : %{isbn}."
+        language: "Language: %{language}"
+        number_of_pages: "Number of pages: %{number_of_pages}."
+        publication_date: "Publication date: %{publication_date}."
+        status: "Status: %{status}."
+        subject: "Subject: %{subject}."
+        authors: "Authors:"
+        publishers: "Publishers:"
+        book_not_found: "Book not found"
+        book_items: "Go to book items!"
+      new:
+        title: "Title"
+        name: "Create Book"
+        create_book: "Create book"
+      create:
+        created: "Created"
+      form:
+        title: "Title"
+        isbn: "ISBN : "
+        language: "Language: "
+        number_of_pages: "Number_of_pages: "
+        publication_date: "Publication_date: "
+        status: "Status:"
+        subject: "Subject:"
+        authors: "Authors:"
+        publishers: "Publishers:"
+      index:
+        title: "All Books"
+        name: "All Books"
+        book_name: "Title"
+        isbn: "ISBN"
+        options: "Options"
+        new: "Create New Book"
+      edit:
+        title: "Edit %{title}"
+        edit_book: "Edit book"
+        name: "Edit %{title}"
+        book_not_found: "Book not found"
+      update:
+        updated: "Updated %{title}!"
+        book_not_found: "Book not found"
+      destroy:
+        deleted: "%{title} has been deleted!"
+        fail_to_delete: "Fail to delete %{title}"
+        book_not_found: "Book not found"
+    book_items:
+      form:
+        bar_code: "Bar code"
+        is_reference_only: "Is Refrernce_only"
+        price: "Price"
+        format: "Format"
+        status: "Status"
+        date_of_purchase: "Date of purchase"
+      new:
+        title: "Create Book Item"
+        name: "New Item for %{title}"
+        create_item: "Create"
+      edit:
+        title: "Edit Book Item"
+        name: "Edit Item for %{title}"
+        edit_item: "Edit"
+      index:
+        title: "%{title} | All"
+        name: "%{title} | Items"
+        bar_code: "Bar code"
+        price: "Price"
+        status: "Status"
+        options: "Options"
+        new: "New Book Items"
+      show:
+        title: "%{title}"
+        isbn: "ISBN : %{isbn}."
+        bar_code: "Barcode: %{bar_code}."
+        is_reference_only: "Is refernce only : %{is_reference_only}."
+        price: "Price: %{price}."
+        formatting: "Format: %{formatting}."
+        status: "Status: %{status}."
+        date_of_purchase: "Date of purchase: %{date_of_purchase}"
+        return_all_books: "All Books"
+        return_to_book: "See Books"
+      book_item:
+        edit: "Edit"
+        detail: "Detail"
+        delete: "Xóa"

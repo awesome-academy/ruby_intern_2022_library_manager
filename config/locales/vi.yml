@@ -25,6 +25,8 @@ vi:
       library_name: "Awesome Library"
       manage_book: "Quản lý sách"
       books: "Sách"
+      authors: "Tác giả"
+      publisher: "Nhà xuất bản"
       stat: "Thống kê"
       waiting: "Đang đọi duyệt"
       confirm: "Đã xác nhận"
@@ -83,3 +85,159 @@ vi:
       create:
         not_librarian: "Bạn không phải là thủ thư"
         invalid_info: "Thông tin tài khoản mật khẩu không hợp lệ"
+    authors:
+      new:
+        unauthorized: "Đăng nhập để tiếp tục"
+        create_author: "Tạo tác giả"
+      show:
+        unauthorized: "Đăng nhập để tiếp tục"
+        name: "Tác giả %{name}"
+        author_not_found: "Không thể tìm thấy tác giả với id: %{id}!"
+      index:
+        unauthorized: "Đăng nhập để tiếp tục"
+        title: "Tất cả tác giả"
+        name: "Tất cả tác giả"
+        author_name: "Tên"
+        options: "Tùy chọn"
+        detail: "Chi tiết"
+        edit: "Sửa"
+        delete: "Xóa"
+        new: "Tạo mới"
+      edit:
+        unauthorized: "Đăng nhập để tiếp tục"
+        title: "Sửa Tác giả"
+        page_name: "Sửa Tác giả"
+        author_not_found: "Không tìm thấy tác giả với id: %{id}!"
+        edit: "Cập nhật"
+      destroy:
+        unauthorized: "Đăng nhập để tiếp tục"
+        author_not_found: "Không tìm thấy tác giả với id: %{id}!"
+        deleted: "Tác giả đã bị xóa"
+        forbidden: "Lỗi đã xảy ra"
+      update:
+        unauthorized: "Đăng nhập để tiếp tục"
+        author_not_found: "Không tìm thấy tác giả với id: %{id}!"
+        updated: "Tác giả đã được cập nhật"
+      form:
+        name: "Tên"
+        bio: "Tiều sử"
+        unauthorized: "Chưa đăng nhập"
+    publishers:
+      index:
+        title: "Tất cả tác giả"
+        name: "Tất cả tác giả"
+        publisher_name: "Tên tác giả"
+        city: "Thành phố"
+        new: "Thêm nhà xuất bản"
+        option: "Tuỳ chọn"
+      show:
+        title: "Nhà xuất bản %{name}"
+        name: "Tên:%{name}."
+        description: "Mô tả: %{description}"
+        contact: "Liên hệ: %{contact}."
+        street: "Phố: %{street}."
+        sub_district: "Phường: %{sub_district}."
+        district: "Quận: %{district}."
+        city: "Thành phố: %{city}."
+      publisher:
+        detail: "Chi tiết"
+        edit: "Chỉnh sửa"
+        delete: "Xoá"
+      new:
+        title: "Thêm mới nhà xuất bản"
+        create_publisher: "Tạo"
+        name: "Thêm nhà xuất bản"
+      edit:
+        title: "Sửa nhà xuất bản"
+        edit_publisher: "Sửa"
+        name: "Sửa nhà xuất bản"
+      destroy:
+        deleted: "Xóa thành công"
+        fail_to_delete: "Xóa thất bại!"
+    books:
+      show:
+        title: "%{title}"
+        isbn: "ISBN : %{isbn}."
+        language: "Ngôn ngữ: %{language}"
+        number_of_pages: "Số trang: %{number_of_pages}."
+        publication_date: "Ngày xuất bản: %{publication_date}."
+        status: "Trạng thái: %{status}."
+        subject: "Chủ đề: %{subject}."
+        authors: "Tác giả:"
+        publishers: "Nhà xuất bản:"
+        book_not_found: "Không tìm thầy sách"
+        book_items: "Đi đến các sách!"
+      new:
+        title: "Thêm mới sách"
+        name: "Thêm mới sách"
+        create_book: "Thêm mới sách"
+      create:
+        created: "Đã thêm"
+      form:
+        title: "Title"
+        isbn: "ISBN : "
+        language: "Ngôn ngữ: "
+        number_of_pages: "Số trang: "
+        publication_date: "Ngày xuất bản: "
+        status: "Trạng thái:"
+        subject: "Chủ đề:"
+        authors: "Tác giả:"
+        publishers: "Nhà xuất bản:"
+      index:
+        title: "Tất cả sách"
+        name: "Tất cả sách"
+        book_name: "Tên sách"
+        isbn: "ISBN"
+        options: "Tùy chọn"
+        new: "Tạo mới sách"
+      edit:
+        title: "Sửa %{title}"
+        edit_book: "Sửa Sách"
+        name: "Sửa %{title}"
+        book_not_found: "Không tìm thấy sách"
+      update:
+        updated: "Cập nhật %{title}!"
+        book_not_found: "Không tìm thấy sách"
+      destroy:
+        deleted: "%{title} Đã bị xóa!"
+        fail_to_delete: "Không xóa được %{title}"
+        book_not_found: "Không tìm thấy sách"
+    book_items:
+      form:
+        bar_code: "Mã vạch"
+        is_reference_only: "Sách tham chiếu"
+        price: "Giá nhập"
+        format: "Định dạng"
+        status: "Trang thái"
+        date_of_purchase: "Ngày mua"
+      new:
+        title: "Tạo thêm sách"
+        name: "Thêm sách cho %{title}"
+        create_item: "Đã tạo"
+      edit:
+        title: "Sửa sách"
+        name: "Sửa sách cho %{title}"
+        edit_item: "Sửa"
+      index:
+        title: "%{title} | Tất cả"
+        name: "%{title} | Đơn vị sách"
+        bar_code: "Ma"
+        price: "Mã vạch"
+        status: "Trạng thái"
+        options: "Tùy chọn"
+        new: "Thêm mới đơn vị sách"
+      show:
+        title: "%{title}"
+        isbn: "ISBN : %{isbn}."
+        bar_code: "Mã vạch: %{bar_code}."
+        is_reference_only: "Sách tham chiếu: %{is_reference_only}."
+        price: " Giá: %{price}."
+        formatting: "Định dạng: %{formatting}."
+        status: "Trạng thái : %{status}."
+        date_of_purchase: "Ngày mua: %{date_of_purchase}"
+        return_all_books: "Tất cả sách"
+        return_to_book: "Xem Sách"
+      book_item:
+        edit: "Sửa"
+        detail: "Chi tiết"
+        delete: "Xóa"

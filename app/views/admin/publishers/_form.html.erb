@@ -1,0 +1,28 @@
+<%= form_with model: [:admin, @publisher] do |f| %>
+  <%= render partial: "error_messages" %>
+
+  <%= f.label :name, t(".name") %>
+  <%= f.text_field :name, class: "form-control" %>
+
+  <%= f.label :description, t(".description") %>
+  <%= f.text_area :description, class: "form-control" %>
+
+  <%= f.label :contact, t(".contact") %>
+  <%= f.text_field :contact, class: "form-control" %>
+
+  <%= f.fields_for :address do |address_form| %>
+    <%= address_form.label :street, t(".street") %>
+    <%= address_form.text_field :street, class: "form-control" %>
+
+    <%= address_form.label :sub_district, t(".sub_district") %>
+    <%= address_form.text_field :sub_district, class: "form-control" %>
+
+    <%= address_form.label :district, t(".district") %>
+    <%= address_form.text_field :district, class: "form-control" %>
+
+    <%= address_form.label :city, t(".city") %>
+    <%= address_form.text_field :city, class: "form-control" %>
+  <% end %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

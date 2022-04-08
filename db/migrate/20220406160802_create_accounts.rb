@@ -17,9 +17,6 @@ class CreateAccounts < ActiveRecord::Migration[7.0]
       t.string :phone_number, null: false
       t.string :type
 
-      t.references :address, foreign_key: {to_table: :addresses},
-                    index: {unique: true}
-
       t.timestamps
     end
   end

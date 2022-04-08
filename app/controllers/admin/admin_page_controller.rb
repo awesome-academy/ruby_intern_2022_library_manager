@@ -12,6 +12,7 @@ module Admin
       return if current_account&.is_librarian?
 
       flash[:danger] = t ".not_librarian"
+      store_location
       redirect_to admin_login_url
     end
   end
