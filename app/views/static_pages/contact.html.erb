@@ -1,0 +1,16 @@
+<% provide :title, t(".title") %>
+<h1><%= t ".name" %></h1>
+<div class="card">
+  <div class="card-body">
+    <p>
+      <%= t ".des" %>
+    </p>
+    <p>
+      <%= t ".via_phone", phone_number: Settings.contact.phone %>
+    </p>
+    <p>
+      <%= t ".via_mail" %>
+      <%= link_to t(".email"), Settings.contact.email %>
+    </p>
+  </div>
+</div>

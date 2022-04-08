@@ -1,0 +1,11 @@
+<% provide :title, t(".title") %>
+<h1><%= t ".name" %></h1>
+
+<div class="card">
+  <div class="card-body">
+    <p>
+      <%= t ".description" %>
+      <%= link_to t(".contact_page"), contact_path %>.
+    </p>
+  </div>
+</div>
