@@ -248,3 +248,7 @@ en:
         edit: "Edit"
         detail: "Detail"
         delete: "Xóa"
+  books:
+    index:
+      all_books: "All Books"
+      let_discover: "Let's discover"

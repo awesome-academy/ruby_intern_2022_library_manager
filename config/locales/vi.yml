@@ -247,3 +247,7 @@ vi:
         edit: "Sửa"
         detail: "Chi tiết"
         delete: "Xóa"
+  books:
+    index:
+      all_books: ".Tất cả sách"
+      let_discover: "Hãy cùng khám phá"

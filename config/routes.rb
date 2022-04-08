@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
 
+    resources :books, only: :index
     namespace :admin do
       get "/", to: "admin_page#home"
       get "/login", to: "sessions#new"
@@ -21,7 +22,6 @@ Rails.application.routes.draw do
       resources :books do
         resources :book_items
       end
-
     end
   end
 end

@@ -1,7 +1,8 @@
 <%= form_with model: [:admin, @book, @book_item] do |f| %>
   <%= render partial: "messages/error_messages",
       locals: {obj: @book_item} %>
-<%= f.label :bar_code, t(".bar_code") %> <%= f.text_field :bar_code, class: "form-control" %>
+  <%= f.label :bar_code, t(".bar_code") %> <%= f.text_field :bar_code,
+      class: "form-control" %>
   <%= f.label :is_reference_only, t(".is_reference_only") %>
   <%= f.check_box :is_reference_only, class: "form-control" %>
 

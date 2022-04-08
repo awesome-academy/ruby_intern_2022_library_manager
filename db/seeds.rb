@@ -40,7 +40,7 @@ Author.create!(
 )
 
 Author.create!(
-  name: "Dennis Ritchie",
+  name: "Brian Kernighan",
   bio: "Brian Wilson Kernighan (/ˈkɜːrnɪhæn/;[6] born 1942)[1] is a Canadian" \
         "computer scientist."
 )
