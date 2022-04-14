@@ -1,0 +1,2 @@
+class CashTransaction < FineTransaction
+end
