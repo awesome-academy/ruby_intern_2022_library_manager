@@ -1,0 +1,50 @@
+vi:
+  hello: "Xin Chào"
+  base_title: "Awesome Library"
+  layouts:
+    header:
+      brand: "Awesome Library"
+      contact: "Liên hệ"
+      help: "Trợ giúp"
+      about: "Vê chúng tôi"
+    footer:
+      source: "Xem mã nguồn trên github"
+      about: "Về chúng tôi"
+      news: "Tin tức"
+      contact: "Liên hệ"
+  static_pages:
+    home:
+      title: "Trang chủ"
+      name: "Trang chủ"
+      welcome: "Chào mừng đến với thư viện"
+      explore: "Khám phá thế giới tri thức cùng với chúng tôi"
+      sign_up_now: "Đăng ký ngay"
+      image: "Thư viện"
+    about:
+      title: "Về chúng tôi"
+      name: "Về chúng tôi"
+      what_can_be_found: "Thư viện này là thư viện lớn nhất thế giới với
+                          hàng triệu cuốn sách, ghi chép, ảnh, bài báo..."
+      suggest_sign_up: "Để chúng tôi có thể giúp đỡ bạn nhiều hơn, hãy đăng
+                  ký tài khoản!"
+      sign_up: "Đăng ký ngay"
+    help:
+      title: "Trợ giúp"
+      name: "Trợ giúp"
+      description: "Chúng tôi đang xây dụng một cộng đồng người hỗ trợ,
+      nếu bạn muốn giúp đỡ, liên lạc qua "
+      contact_site: "trang này"
+    contact:
+      title: "Liên hệ"
+      name: "Liên hệ"
+      des: "Liên hệ với chúng tôi bằng những cách sau đây:"
+      via_phone: "Qua điện thoại: %{phone_number}"
+      via_mail: "Qua email : "
+      email: "library@awesome.com"
+  admin:
+    admin_page:
+      home:
+        title: "Trang chủ"
+        intro: "Đây là trang chủ"
+        hint: "Sẽ có thay đổi sau"
+

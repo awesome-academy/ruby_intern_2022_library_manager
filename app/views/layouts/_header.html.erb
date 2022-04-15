@@ -1,0 +1,24 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <%= link_to t(".brand"), root_path, class: "navbar-brand" %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto ">
+          <li class="nav-item">
+            <%= link_to t(".about"), about_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to t(".contact"), contact_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to t(".help"), help_path, class: "nav-link" %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+

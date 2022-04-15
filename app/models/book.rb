@@ -7,7 +7,7 @@ class Book < ApplicationRecord
   has_many :authors, through: :books_authors
   has_many :book_items, dependent: :restrict_with_exception
   has_many :book_reservations, dependent: :restrict_with_exception
-  has_many :members, through: :book_reservations, class_name: Member.name
+  has_many :members, through: :book_reservations
   has_many :book_freezings, dependent: :restrict_with_exception
   has_many :advanced_members, through: :book_freezings
   has_many :review, dependent: :restrict_with_exception
