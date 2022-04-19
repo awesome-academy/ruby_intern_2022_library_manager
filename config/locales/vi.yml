@@ -7,11 +7,27 @@ vi:
       contact: "Liên hệ"
       help: "Trợ giúp"
       about: "Vê chúng tôi"
+      book: "Sách"
+      reservations: "Đăng ký mượn"
+      lending: "Đang mượn"
+      accounts: "Tài khoản"
+      profile: "Hồ sơ"
+      logout: "Đăng xuất"
     footer:
       source: "Xem mã nguồn trên github"
       about: "Về chúng tôi"
       news: "Tin tức"
       contact: "Liên hệ"
+    headeradmin:
+      help: "Trợ giúp"
+      log_out: "Đăng xuất"
+    sidebaradmin:
+      library_name: "Awesome Library"
+      manage_book: "Quản lý sách"
+      books: "Sách"
+      stat: "Thống kê"
+      waiting: "Đang đọi duyệt"
+      confirm: "Đã xác nhận"
   static_pages:
     home:
       title: "Trang chủ"
@@ -41,10 +57,29 @@ vi:
       via_phone: "Qua điện thoại: %{phone_number}"
       via_mail: "Qua email : "
       email: "library@awesome.com"
+  sessions:
+    new:
+      title: "Thành viên đăng nhập"
+      name: "Thành viên đăng nhập"
+      username: "Tên tài khoản"
+      password: "Mật khẩu"
+      log_in: "Đăng nhập"
+    create:
+      not_member: "Bạn không phải là thành viên!"
+      invalid_info: "Thông tin tài khoản mật khẩu không hợp lệ"
   admin:
     admin_page:
       home:
         title: "Trang chủ"
         intro: "Đây là trang chủ"
         hint: "Sẽ có thay đổi sau"
-
+    sessions:
+      new:
+        title: "Thủ thư đăng nhập"
+        name: "Thủ thư đăng nhập"
+        username: "Tên tài khoản"
+        password: "Mật khẩu"
+        log_in: "Đăng nhâp"
+      create:
+        not_librarian: "Bạn không phải là thủ thư"
+        invalid_info: "Thông tin tài khoản mật khẩu không hợp lệ"

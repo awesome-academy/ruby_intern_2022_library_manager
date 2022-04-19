@@ -1,10 +1,10 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
-  <a href="index3.html" class="brand-link">
+  <%= link_to admin_path, class: "brand-link" do %>
     <%= image_tag "side_bar.jpeg",
                   class: "brand-image img-circle elevation-3", alt: "Library"%>
     <span class="brand-text font-weight-light"><%= t ".library_name" %></span>
-  </a>
+  <% end %>
 
   <!-- Sidebar -->
   <div class="sidebar">
@@ -14,7 +14,7 @@
         <%= image_tag "avatar_sample.jpeg", class: "img-circle elevation-2", alt: "User Image" %>
       </div>
       <div class="info">
-        <%= link_to "Micheal Field", "#", class: "d-block" %>
+        <%= link_to current_account.last_name, "#", class: "d-block" %>
       </div>
     </div>
 
@@ -27,7 +27,7 @@
           <%= link_to "#", class: "nav-link" do %>
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
-              Manage Books
+              <%= t ".manage_book" %>
               <i class="right fas fa-angle-left"></i>
             </p>
           <% end %>
@@ -35,13 +35,13 @@
             <li class="nav-item">
               <%= link_to "#", class: "nav-link" do %>
                 <i class="far fa-circle nav-icon"></i>
-                <p>Book</p>
+                <p><%= t ".books" %></p>
               <% end %>
             </li>
             <li class="nav-item">
               <%= link_to "#", class: "nav-link" do %>
                 <i class="far fa-circle nav-icon"></i>
-                <p>Stat</p>
+                <p><%= t ".stat" %></p>
               <% end %>
             </li>
           </ul>
@@ -50,7 +50,7 @@
           <%= link_to "#", class: "nav-link" do %>
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
-              Reservations
+              <%= t ".reservations" %>
               <i class="right fas fa-angle-left"></i>
             </p>
           <% end %>
@@ -58,13 +58,13 @@
             <li class="nav-item">
               <%= link_to "#", class: "nav-link" do %>
                 <i class="far fa-circle nav-icon"></i>
-                <p>Wating</p>
+                <p><%= t ".waiting" %></p>
               <% end %>
             </li>
             <li class="nav-item">
               <%= link_to "#", class: "nav-link" do %>
                 <i class="far fa-circle nav-icon"></i>
-                <p>Confirm</p>
+                <p><%= t ".confirm" %></p>
               <% end %>
             </li>
           </ul>

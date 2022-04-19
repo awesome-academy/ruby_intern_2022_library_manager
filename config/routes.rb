@@ -6,8 +6,15 @@ Rails.application.routes.draw do
     get "/about", to: "static_pages#about"
     get "/contact", to: "static_pages#contact"
 
+    get "/login", to: "sessions#new"
+    post "/login", to: "sessions#create"
+    delete "/logout", to: "sessions#destroy"
+
     namespace :admin do
       get "/", to: "admin_page#home"
+      get "/login", to: "sessions#new"
+      post "/login", to: "sessions#create"
+      delete "/logout", to: "sessions#destroy"
     end
   end
 end

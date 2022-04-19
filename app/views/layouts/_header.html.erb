@@ -16,9 +16,37 @@
           <li class="nav-item">
             <%= link_to t(".help"), help_path, class: "nav-link" %>
           </li>
+          <% if logged_in? %>
+            <li class="dropdown nav-item">
+              <%= link_to "#", class: "dropdown-toggle nav-link",
+                "data-toggle": "dropdown" do %>
+                <%= t ".books" %><b class="caret"></b>
+              <% end %>
+              <ul class="dropdown-menu">
+                <li>
+                  <%= link_to t(".reservations"), "#", class: "nav-link"%>
+                </li>
+                <li><%= link_to t(".lending"), "#", class: "nav-link" %></li>
+              </ul>
+            </li>
+            <li class="dropdown nav-item">
+              <%= link_to "#", class: "dropdown-toggle nav-link",
+                "data-toggle": "dropdown" do %>
+                <%= t ".accounts" %><b class="caret"></b>
+              <% end %>
+              <ul class="dropdown-menu">
+                <li>
+                  <%= link_to t(".profile"), "#", class: "nav-link" %>
+                </li>
+                <li>
+                  <%= link_to t(".logout"), logout_path,
+                    class: "nav-link", data: {"turbo-method": :delete} %>
+                </li>
+              </ul>
+            </li>
+          <% end %>
         </ul>
       </div>
     </div>
   </nav>
 </div>
-

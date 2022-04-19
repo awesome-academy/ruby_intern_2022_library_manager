@@ -3,3 +3,18 @@ contact:
   email: awesome@library.com
 link:
   source_code: https://github.com/awesome-academy/ruby_intern_2022_library_manager
+validation:
+  mail:
+    length:
+      max: 50
+    regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/'
+  name:
+    length:
+      max: 255
+  password:
+    length:
+      min: 6
+  code:
+    card:
+      length:
+        max: 50
