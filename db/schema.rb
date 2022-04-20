@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_12_015758) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_21_011639) do
   create_table "accounts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "username", null: false
     t.string "password_digest", null: false
@@ -27,7 +27,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_12_015758) do
     t.datetime "reset_sent_at"
     t.string "phone_number", null: false
     t.string "type"
-    t.bigint "address_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date "start_date"
@@ -40,7 +39,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_12_015758) do
     t.integer "academic_degree"
     t.string "unit"
     t.string "role"
-    t.index ["address_id"], name: "index_accounts_on_address_id", unique: true
   end
 
   create_table "addresses", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -50,6 +48,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_12_015758) do
     t.string "city", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "locatable_id"
+    t.string "locatable_type"
   end
 
   create_table "authors", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -190,17 +190,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_12_015758) do
     t.string "contact", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "address_id"
-    t.index ["address_id"], name: "index_publishers_on_address_id", unique: true
   end
 
   create_table "rack_locations", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "number", null: false
     t.string "location_identifier", null: false
-    t.bigint "book_item_id_id"
+    t.bigint "book_item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["book_item_id_id"], name: "index_rack_locations_on_book_item_id_id"
+    t.index ["book_item_id"], name: "index_rack_locations_on_book_item_id"
   end
 
   create_table "reviews", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -214,7 +212,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_12_015758) do
     t.index ["member_id"], name: "index_reviews_on_member_id"
   end
 
-  add_foreign_key "accounts", "addresses"
   add_foreign_key "book_freezings", "accounts", column: "advanced_member_id"
   add_foreign_key "book_freezings", "books"
   add_foreign_key "book_items", "books"
@@ -233,8 +230,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_12_015758) do
   add_foreign_key "fine_transactions", "fines"
   add_foreign_key "fines", "book_returns"
   add_foreign_key "library_cards", "accounts", column: "member_id"
-  add_foreign_key "publishers", "addresses"
-  add_foreign_key "rack_locations", "book_items", column: "book_item_id_id"
+  add_foreign_key "rack_locations", "book_items"
   add_foreign_key "reviews", "accounts", column: "member_id"
   add_foreign_key "reviews", "books"
 end

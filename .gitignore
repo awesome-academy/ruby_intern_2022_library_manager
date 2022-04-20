@@ -79,3 +79,8 @@ yarn-debug.log*
 # Ignore database configurations
 /config/database.yml
 /config/credentials.yml.enc
+
+# Ignore spec
+/spec/helpers/
+/spec/requests/
+/spec/views/

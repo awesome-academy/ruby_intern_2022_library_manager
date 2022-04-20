@@ -1,4 +1,3 @@
 class Address < ApplicationRecord
-  has_one :publisher, dependent: :nullify
-  has_one :account, dependent: :nullify
+  belongs_to :locatable, polymorphic: true
 end

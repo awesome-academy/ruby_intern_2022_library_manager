@@ -18,3 +18,9 @@ validation:
     card:
       length:
         max: 50
+  book:
+    price:
+      min: 0
+  paragraph:
+    length:
+      max: 1000
