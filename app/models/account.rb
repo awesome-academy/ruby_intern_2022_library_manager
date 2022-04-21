@@ -3,6 +3,8 @@ class Account < ApplicationRecord
 
   enum :status, normal: 0, banned: 1, bad: 2
 
+  has_one :address, as: :locatable, dependent: :destroy
+
   validates :username, presence: true,
                       length: {maximum: Settings.validation.name.length.max},
                       uniqueness: true
