@@ -159,6 +159,7 @@ en:
       destroy:
         deleted: "Delete successfully!"
         fail_to_delete: "Fail to delete"
+        has_books: "This publisher has book!"
     books:
       show:
         title: "%{title}"

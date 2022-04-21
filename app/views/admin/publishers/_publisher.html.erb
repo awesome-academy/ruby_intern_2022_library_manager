@@ -1,0 +1,14 @@
+<tr>
+  <td><%= publisher.id %></td>
+  <td><%= publisher.name %></td>
+  <td><%= publisher.city %></td>
+  <td>
+    <%= link_to t(".detail"), [:admin, publisher], class: "btn btn-info" %>
+    <%= link_to t(".edit"), edit_admin_publisher_path(publisher),
+                    class: "btn btn-success" %>
+    <% if publisher.books.count.zero? %>
+      <%= link_to t(".delete"), admin_publisher_path(publisher),
+        class: "btn btn-danger", data: {turbo_method: :delete} %>
+    <% end %>
+  </td>
+</tr>

@@ -159,6 +159,7 @@ vi:
       destroy:
         deleted: "Xóa thành công"
         fail_to_delete: "Xóa thất bại!"
+        has_books: "Nhà xuất bản có sách"
     books:
       show:
         title: "%{title}"
