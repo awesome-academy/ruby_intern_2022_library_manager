@@ -7,7 +7,7 @@ module Admin
     def create
       if @account.is_librarian?
         log_in @account
-        redirect_to admin_url
+        redirect_back_or admin_url
       else
         flash.now[:danger] = t ".not_librarian"
         render :new, status: :unprocessable_entity

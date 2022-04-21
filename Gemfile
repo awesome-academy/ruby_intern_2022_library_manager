@@ -17,6 +17,7 @@ gem "bootsnap", require: false
 gem "rails-i18n"
 gem "config"
 gem "bcrypt"
+gem "pagy", "~> 5.1.0"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
