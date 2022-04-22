@@ -1,11 +1,5 @@
-class Admin::AuthorsController < ApplicationController
-  include Authorizable
-  include Paginable
-
-  layout "admin_application"
-
+class Admin::AuthorsController < Admin::AdminBaseController
   before_action :load_pagy_locale, only: :index
-  before_action :authorize_librarian
   before_action :check_author, except: %i(index new create)
 
   def index

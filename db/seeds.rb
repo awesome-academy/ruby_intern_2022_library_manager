@@ -45,17 +45,19 @@ Author.create!(
         "computer scientist."
 )
 
-p = Publisher.create!(
-  name: "Prentice Hall",
-  description: "Best American Publisher",
-  contact: "0987654321",
-  address_attributes: {
-    street: "Abc",
-    sub_district: "Abc",
-    district: "Abc",
-    city: "Abc",
-  }
-)
+1..20.times do |i|
+  p = Publisher.create!(
+    name: "Prentice Hall #{i}",
+    description: "Best American Publisher",
+    contact: "0987654321",
+    address_attributes: {
+      street: "Abc",
+      sub_district: "Abc",
+      district: "Abc",
+      city: "Abc",
+    }
+  )
+end
 
 book = Book.create!(
   isbn: "13862138136",
@@ -72,9 +74,9 @@ book = Book.create!(
   publisher_ids: [1]
 )
 
-for a in 1..100 do
+1..100.times do |a|
   RackLocation.create!(
     number: a,
-    location_identifier: "Num #{a/10}"
+    location_identifier: "Num #{a}"
   )
 end
