@@ -18,7 +18,10 @@ Rails.application.routes.draw do
 
       resources :authors
       resources :publishers
-      resources :books
+      resources :books do
+        resources :book_items
+      end
+
     end
   end
 end

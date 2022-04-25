@@ -1,0 +1,41 @@
+<%= form_with model: [:admin, @book, @book_item] do |f| %>
+  <%= render partial: "messages/error_messages",
+      locals: {obj: @book_item} %>
+<%= f.label :bar_code, t(".bar_code") %> <%= f.text_field :bar_code, class: "form-control" %>
+  <%= f.label :is_reference_only, t(".is_reference_only") %>
+  <%= f.check_box :is_reference_only, class: "form-control" %>
+
+  <%= f.label :price, t(".price") %>
+  <%= f.number_field :price, value: 1, step: 0.05,
+      class: "form-control" %>
+
+  <%= f.label :format, t(".format") %>
+  <%= f.select :format,
+      BookItem.formats.keys.to_a,
+      {prompt: true},
+      {class: "form-control"} %>
+
+  <%= f.label :format, t(".format") %>
+  <%= f.select :status,
+      BookItem.statuses.keys.to_a,
+      {prompt: true},
+      {class: "form-control"} %>
+
+  <% if @book_item.new_record? %>
+    <%= f.label :rack_location_id, t(".rack_location") %>
+    <%= f.collection_select :rack_location_id,
+        RackLocation.un_used, :id, :number,
+        {prompt: true}, {class: "form-control"} %>
+  <% elsif @book_item.persisted? %>
+    <%= f.label :rack_location_id, t(".rack_location") %>
+    <%= f.collection_select :rack_location_id,
+        RackLocation.suitable_for(@book_item), :id, :number,
+        {prompt: true, selected: @book_item.rack_location.id},
+        {class: "form-control"} %>
+  <% end %>
+
+  <%= f.label :date_of_purchase, t(".date_of_purchase") %>
+  <%= f.date_field :date_of_purchase, class: "form-control" %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

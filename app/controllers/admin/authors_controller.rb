@@ -53,6 +53,6 @@ class Admin::AuthorsController < Admin::AdminBaseController
   end
 
   def check_author
-    @author = Author.find id: params[:id]
+    @author = Author.find params[:id]
   end
 end

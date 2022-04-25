@@ -243,6 +243,7 @@ en:
         date_of_purchase: "Date of purchase: %{date_of_purchase}"
         return_all_books: "All Books"
         return_to_book: "See Books"
+        rack_location: "Location: %{location}"
       book_item:
         edit: "Edit"
         detail: "Detail"

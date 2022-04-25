@@ -81,3 +81,17 @@ end
     location_identifier: "Num #{a}"
   )
 end
+
+1..20.times do |a|
+  r = RackLocation.find(a+1)
+  BookItem.create!(
+    bar_code: "23131313#{a}",
+    is_reference_only: false,
+    price: 100 + a,
+    format: :paper_back,
+    status: :nice,
+    book_id: 1,
+    date_of_purchase: Date.parse("2022-04-05"),
+    rack_location: r
+  )
+end
