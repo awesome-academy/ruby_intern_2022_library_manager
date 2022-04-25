@@ -59,21 +59,22 @@ Author.create!(
   )
 end
 
-book = Book.create!(
-  isbn: "13862138136",
-  title: "The C Programming Language",
-  language: "English",
-  number_of_pages: 287,
-  publication_date: Date.parse("1971-1-1"),
-  status: :on_demand,
-  subject: "computer",
-  image_url: "https://product.hstatic.net/200000211451/product" \
-              "/e4277744-b37e-40a1-9bf1-1239bc0ea211_f5ec61bfe1" \
-              "8b4838a51536cd092d6b42_master.jpg",
-  author_ids: [1,2],
-  publisher_ids: [1]
-)
-
+1..100.times do |i|
+  book = Book.create!(
+    isbn: "13862138136",
+    title: "The C Programming Language #{i}",
+    language: "English",
+    number_of_pages: 287,
+    publication_date: Date.parse("1971-1-1"),
+    status: :on_demand,
+    subject: "computer",
+    image_url: "https://product.hstatic.net/200000211451/product" \
+                "/e4277744-b37e-40a1-9bf1-1239bc0ea211_f5ec61bfe1" \
+                "8b4838a51536cd092d6b42_master.jpg",
+    author_ids: [1,2],
+    publisher_ids: [1]
+  )
+end
 1..100.times do |a|
   RackLocation.create!(
     number: a,

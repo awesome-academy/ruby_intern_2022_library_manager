@@ -50,15 +50,10 @@ class Admin::PublishersController < Admin::AdminBaseController
   private
 
   def publisher_params
-    params.require(:publisher)
-          .permit(Publisher::CREATABLE_ATTRS)
+    params.require(:publisher).permit(Publisher::CREATABLE_ATTRS)
   end
 
   def check_publisher
-    @publisher = Publisher.find_by id: params[:id]
-    return if @publisher
-
-    flash[:danger] = t ".publisher_not_found", id: params[:id]
-    redirect_to admin_publishers_url
+    @publisher = Publisher.find id: params[:id]
   end
 end

@@ -53,10 +53,6 @@ class Admin::AuthorsController < Admin::AdminBaseController
   end
 
   def check_author
-    @author = Author.find_by id: params[:id]
-    return if @author
-
-    flash[:danger] = t ".author_not_found", id: params[:id]
-    redirect_to admin_authors_url
+    @author = Author.find id: params[:id]
   end
 end
