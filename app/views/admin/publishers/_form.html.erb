@@ -1,6 +1,6 @@
 <%= form_with model: [:admin, @publisher] do |f| %>
   <%= render partial: "messages/error_messages",
-      locals: {obj: @publisher}%>
+      locals: {obj: @publisher} %>
 
   <%= f.label :name, t(".name") %>
   <%= f.text_field :name, class: "form-control" %>

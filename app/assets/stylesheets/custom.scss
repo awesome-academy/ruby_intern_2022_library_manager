@@ -151,3 +151,11 @@ input {
     border-bottom: 1px solid $light-gray;
   }
 }
+
+.image-holder {
+  img {
+    display: block;
+    max-height: 500px;
+    float: right;
+  }
+}
