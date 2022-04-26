@@ -53,6 +53,6 @@ class Admin::BooksController < Admin::AdminBaseController
   end
 
   def load_book
-    @book = Book.find id: params[:id]
+    @book = Book.find params[:id]
   end
 end

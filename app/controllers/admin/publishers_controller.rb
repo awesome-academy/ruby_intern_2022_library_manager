@@ -54,6 +54,6 @@ class Admin::PublishersController < Admin::AdminBaseController
   end
 
   def check_publisher
-    @publisher = Publisher.find id: params[:id]
+    @publisher = Publisher.find params[:id]
   end
 end

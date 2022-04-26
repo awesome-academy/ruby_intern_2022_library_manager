@@ -1,0 +1,39 @@
+<% provide :title, t(".title", title: @book.title) %>
+<div class="row">
+  <div class="col-md-6 offset-md-3" >
+    <div class="card">
+      <div class="card-header">
+        <p class="font-weight-bold">
+          <%= @book.title %>
+        </p>
+      </div>
+      <div class="card-body">
+        <div class="row">
+        <div class="image-holder col-md-6">
+          <%= image_tag @book.image_url, alt: @book.title %>
+        </div>
+
+        <div class="col-md-6">
+          <p><%= t ".bar_code", bar_code: @book_item.bar_code %><p>
+          <p><%= t ".is_reference_only",
+              is_reference_only: @book_item.is_reference_only %><p>
+          <p><%= t ".price", price:
+                number_to_currency(@book_item.price) %><p>
+          <p><%= t ".formatting", formatting: @book_item.format %><p>
+          <p><%= t ".status", status: @book_item.status %><p>
+          <p><%= t ".rack_location",
+                  location: @book_item.location_identifier %><p>
+          <p><%= t ".date_of_purchase",
+              date_of_purchase: @book_item.date_of_purchase %><p>
+        </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <%= link_to t(".return_all_books"), admin_books_path,
+            class: "btn btn-info" %>
+        <%= link_to t(".return_to_book"), [:admin, @book],
+            class: "btn btn-info" %>
+      </div>
+    </div>
+  </div>
+</div>
