@@ -6,7 +6,7 @@
     <%= link_to t(".detail"), [:admin, book], class: "btn btn-info" %>
     <%= link_to t(".edit"), edit_admin_book_path(book),
                     class: "btn btn-success" %>
-    <% if book.book_items.count == 0 %>
+    <% if book.book_items.count.zero? %>
       <%= link_to t(".delete"), admin_book_path(book),
         class: "btn btn-danger", data: {turbo_method: :delete} %>
     <% end %>

@@ -1,0 +1,22 @@
+<div class="col-md-6 col-lg-4 col-xl-3">
+  <div class="single-product">
+    <div class="part-1">
+      <div class="product-status">
+        <p class="status-<%= book.status %>">
+          <%= book_status_i18n book %>
+        </p>
+      </div>
+      <%= image_tag book.image_url %>
+      <ul>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa-solid fa-book"></i>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+    <div class="part-2">
+      <h3 class="product-title"><%= book.title %></h3>
+    </div>
+  </div>
+</div>
